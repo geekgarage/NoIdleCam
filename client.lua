@@ -22,6 +22,6 @@ Citizen.CreateThread(function()
   TriggerEvent("chat:addSuggestion", "/idlecamon", "Re-enables the idle cam")
   TriggerEvent("chat:addSuggestion", "/idlecamoff", "Disables the idle cam")
   
-  local idleCamDisabled = GetResourceKvpString("idleCam") ~= "on"
-  DisableIdleCamera(idleCamDisabled)
+  local idleCamDisabled = GetResourceKvpString("idleCam") == "off" --- Idle Cam is on by default for new players / first time adding to server.
+  DisableIdleCamera(idleCamDisabled)                               --- If you would prefer to have it off by default, change the value to "on"
 end)
