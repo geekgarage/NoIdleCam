@@ -23,14 +23,13 @@ TriggerEvent("chat:addSuggestion", "/idlecamon", "Re-enables the idle cam")
 TriggerEvent("chat:addSuggestion", "/idlecamoff", "Disables the idle cam")
 
 local IdleCamState = GetResourceKvpString("idleCam") == "off"
-print(IdleCamState)
-print("We Rollin'")
+
 Citizen.CreateThread(function()
 	while true do
     IdleCamState = GetResourceKvpString("idleCam")
     print(IdleCamState)
     if IdleCamState == "off" then
-      print("I'm In!")
+      print("resetting idle timer!")
 		  InvalidateIdleCam()
 		  InvalidateVehicleIdleCam()
     end
