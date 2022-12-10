@@ -27,9 +27,7 @@ local IdleCamState = GetResourceKvpString("idleCam") == "off"
 Citizen.CreateThread(function()
 	while true do
     IdleCamState = GetResourceKvpString("idleCam")
-    print(IdleCamState)
     if IdleCamState == "off" then
-      print("resetting idle timer!")
 		  InvalidateIdleCam()
 		  InvalidateVehicleIdleCam()
     end
