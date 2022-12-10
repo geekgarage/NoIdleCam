@@ -21,7 +21,10 @@ end)
 Citizen.CreateThread(function()
   TriggerEvent("chat:addSuggestion", "/idlecamon", "Re-enables the idle cam")
   TriggerEvent("chat:addSuggestion", "/idlecamoff", "Disables the idle cam")
-  
-  local idleCamDisabled = GetResourceKvpString("idleCam") == "off" --- Idle Cam is on by default for new players / first time adding to server.
-  DisableIdleCamera(idleCamDisabled)                               --- If you would prefer to have it off by default, change the value to "on"
+	while true do
+    local idleCamDisabled = GetResourceKvpString("idleCam") == "off"
+		InvalidateIdleCam()
+		InvalidateVehicleIdleCam()
+		Wait(20000) --The idle camera activates after 30 second so we don't need to call this per frame
+	end
 end)
