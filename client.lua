@@ -25,11 +25,12 @@ Citizen.CreateThread(function()
 
 	while true do
     IdleCamState = GetResourceKvpString("idleCam")
+    print(IdleCamState)
     if IdleCamState == "off" then
+      print("I'm In!")
 		  InvalidateIdleCam()
 		  InvalidateVehicleIdleCam()
-		  Wait(9000) --The idle camera activates after 30 second so we don't need to call this per frame
     end
-    Citizen.Wait(1000)
+    Citizen.Wait(10000) --The idle camera activates after 30 second so we don't need to call this per frame
 	end
 end)
