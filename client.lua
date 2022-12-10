@@ -21,10 +21,15 @@ end)
 Citizen.CreateThread(function()
   TriggerEvent("chat:addSuggestion", "/idlecamon", "Re-enables the idle cam")
   TriggerEvent("chat:addSuggestion", "/idlecamoff", "Disables the idle cam")
+  local IdleCamState = GetResourceKvpString("idleCam") == "off"
+
 	while true do
-    local idleCamDisabled = GetResourceKvpString("idleCam") == "off"
-		InvalidateIdleCam()
-		InvalidateVehicleIdleCam()
-		Wait(20000) --The idle camera activates after 30 second so we don't need to call this per frame
+    IdleCamState = GetResourceKvpString("idleCam")
+    if IdleCamState == "off" then
+		  InvalidateIdleCam()
+		  InvalidateVehicleIdleCam()
+		  Wait(9000) --The idle camera activates after 30 second so we don't need to call this per frame
+    end
+    Citizen.Wait(1000)
 	end
 end)
