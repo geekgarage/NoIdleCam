@@ -27,7 +27,9 @@ Citizen.CreateThread(function()
     if IdleCamState == "off" then
       InvalidateIdleCam()
       InvalidateVehicleIdleCam()
+      Citizen.Wait(10000) --The idle camera activates after 30 second so we don't need to call this per frame
+    else
+      Citizen.Wait(1000)
     end
-    Citizen.Wait(10000) --The idle camera activates after 30 second so we don't need to call this per frame
   end
 end)
