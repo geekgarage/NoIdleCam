@@ -1,10 +1,11 @@
 # NoIdleCam
 
-NoIdleCam is a FiveM resources that disables the idle camera animations while on foot or in a vehicle by default.
+NoIdleCam is a simple yet effective FiveM script allowing players to disable the on foot and vehicle idle camera animations.
 
-Players can toggle this on or off in chat and have their preferences saved in the kvs. It will be remembered between game sessions and on any server that uses this resource.
+  
+Players can toggle this on or off in chat and have their preferences saved in the KVS. It will be remembered between game sessions and on any server that uses this resource.
 
-Watch Twitch or YouTube streams on in-game TV screens or possibly during RP scenarios, without drifting off into the clouds.
+Watch Twitch or YouTube streams on in-game TV screens or possibly during RP scenarios, without annoyingly drifting off into the clouds.
 
 
 # Installing:
