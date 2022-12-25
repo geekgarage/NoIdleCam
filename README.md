@@ -20,7 +20,7 @@ Watch Twitch or YouTube streams on in-game TV screens or possibly during RP scen
 
 In chat type `/idlecamon` to turn idle cam on, and `/idlecamoff` to turn idle cam off.
 
-In chat type `/idlemovon` to turn idle PED movement on, and `/idlemovoff` to turn idle PED movement off.
+In chat type `/idlemoveon` to turn idle PED movement on, and `/idlemoveoff` to turn idle PED movement off.
 
 
 # Enjoy 🥰📺
